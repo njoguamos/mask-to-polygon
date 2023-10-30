@@ -9,7 +9,6 @@ output_dir = './tmp/labels'
 for j in os.listdir(input_dir):
     if not j.startswith('.'):
         image_path = os.path.join(input_dir, j)
-        print(image_path)
         # load the binary mask and get its contours
         mask = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         _, mask = cv2.threshold(mask, 1, 255, cv2.THRESH_BINARY)
